@@ -1,6 +1,11 @@
-def mostrar_menu():
-    print ("🌸🌸 == ÁGATA BIENESTAR FEMENINO == 🌸🌸")
-    print("!Bienvenida! Selecciona en tu teclado el número de la opción que desees ver")
+#PALETA DE COLORES
+ROSA_PASTEL = "\033[38;2;255;182;193m"
+ROSA_CHICLE = "\033[38;2;255;105;180m"
+RESET       = "\033[0m" #variable para apagar el color
+
+def mostrar_menu(): #llamar funcion cada vez para mostrar el menú
+    print (f"{ROSA_CHICLE}🌸🌸 == ÁGATA BIENESTAR FEMENINO == 🌸🌸{RESET}")
+    print(f"{ROSA_PASTEL}!Bienvenida! Selecciona en tu teclado el número de la opción que desees ver{RESET}")
     print("1. ☀️  Registro diario bienestar")
     print("2. 📅 Ver resumenes semanales")
     print("3. 🏆 Gestión de retos")
@@ -13,8 +18,8 @@ while True:
     mostrar_menu()
     opcion = int(input("Ingrese cualquier opción del menú (1-7)"))
     if opcion ==1:
-        print(" OPCION 1 EN DESARROLLO")
-        input("\nPresiona Enter para continuar...")
+        print(" OPCION 1 EN DESARROLLO") #reemplazar luego por cada pestaña
+        input("\nPresiona Enter para continuar...") 
     elif opcion == 2:
         print("OPCION 2 EN DESARROLLO")
         input("\nPresiona Enter para continuar...")
