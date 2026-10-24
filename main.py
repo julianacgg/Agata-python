@@ -1,3 +1,4 @@
+from gestion_de_retos import mostrar_gestion_retos
 #PALETA DE COLORES
 ROSA_PASTEL = "\033[38;2;255;182;193m"
 ROSA_CHICLE = "\033[38;2;255;105;180m"
@@ -6,12 +7,13 @@ RESET       = "\033[0m" #variable para apagar el color
 def mostrar_menu(): #llamar funcion cada vez para mostrar el menú
     print (f"{ROSA_CHICLE}🌸🌸 == ÁGATA BIENESTAR FEMENINO == 🌸🌸{RESET}")
     print(f"{ROSA_PASTEL}!Bienvenida! Selecciona en tu teclado el número de la opción que desees ver{RESET}")
-    print("1. ☀️  Registro diario bienestar")
-    print("2. 📅 Ver resumenes semanales")
-    print("3. 🏆 Gestión de retos")
-    print("4. 🌜 Seguimiento del ciclo menstrual")
-    print("5. 🎯 Gestión de habitos")
-    print("6. ⭐ Datos curioso de la semana")
+    print("")
+    print("1. ☀️ Registro diario bienestar") #johan
+    print("2. 📅 Ver resumenes semanales") #valerie
+    print("3. 🏆 Gestión de retos") #juliana
+    print("4. 🌜 Seguimiento del ciclo menstrual") #valerie
+    print("5. 🎯 Gestión de habitos") #juliana
+    print("6. ⭐ Datos curioso de la semana") #johan
     print("7. 🚪 Salir")
 
 while True:
@@ -24,7 +26,7 @@ while True:
         print("OPCION 2 EN DESARROLLO")
         input("\nPresiona Enter para continuar...")
     elif opcion == 3:
-        print("OPCION 3 EN DESARROLLO")
+        mostrar_gestion_retos()
         input("\nPresiona Enter para continuar...")
     elif opcion == 4:
         print("OPCION 4 EN DESARROLLO")
