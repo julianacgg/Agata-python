@@ -13,9 +13,13 @@ def mostrar_gestion_retos():
         with open("datos.json", "r") as archivo:
             datos = json.load(archivo)
             dias_acumulados = datos.get("dias_acumulados", 0)
+            reto_activo = datos.get("reto_activo", "Ninguno")
+           
     except (FileNotFoundError, json.JSONDecodeError):
         # Si el archivo está vacío arranca en 0
         dias_acumulados = 0
+        reto_activo = "Ninguno"
+       
 
     
     retos=np.zeros(4,dtype=object)
@@ -36,25 +40,36 @@ def mostrar_gestion_retos():
     print(f"{ROSA_CHICLE}⭐🏆== GESTIÓN DE RETOS ==🏆⭐{RESET}")
     print("")
 
-    for i in range(0,4,1):
-        print(retos[i])
+    if reto_activo == "Ninguno" or dias_acumulados >=7: #preguntar el reto cuando no hay ninguno o ya termino el anterior
+        if dias_acumulados >=7:
+            dias_acumulados = 0
 
-    eleccion=int(input("\nIngresa el reto que deseas activar: "))
-    while eleccion <1 or eleccion > 4:
-        eleccion=int(input("El número elegido no se encuentra dentro de las opciones, intentalo de nuevo: "))
+        for i in range(0,4,1):
+                print(retos[i])
 
-    reto_activo= nombre_retos[eleccion-1]
-    print(f"\nActivaste el reto {reto_activo} con exito!! ✅")
+        eleccion=int(input("\nIngresa el reto que deseas activar: "))
+        while eleccion <1 or eleccion > 4:
+            eleccion=int(input("El número elegido no se encuentra dentro de las opciones, intentalo de nuevo: "))
+
+        reto_activo= nombre_retos[eleccion-1]
+        print(f"\nActivaste el reto {reto_activo} con exito!! ✅")
+    else:
+        print("Ya tienes un reto activo. Continua con tu registro diario antes.")
+
 
 
     respuesta= input("\n¿Cumpliste tu reto el día de hoy? (Si/No): ").strip().capitalize() #preguntar si cumplio el reto
-    dias_acumulados=0
+    
     while respuesta != "Si" and respuesta != "No":
-        print("Respuesta no reconocida, intenta de nuevo.")
+        print("Respuesta no reconocida, intenta de nuevo.") 
         respuesta = input("¿Cumpliste tu reto el día de hoy? (Si/No): ").strip().capitalize()
+
+
     if respuesta == "Si":
         dias_acumulados +=1
         print(f"{ROSA_CHICLE}¡Excelente trabajo! Progreso actual: {dias_acumulados}/7 días de avance a tu reto 🎯{RESET}") #imprimir dias acumulados
+        if dias_acumulados == 7:
+            print(f"{ROSA_PASTEL}¡FELICIDADES! Completaste tu reto semanal 🏆{RESET}")
     elif respuesta == "No":
         print(f"{ROSA_CHICLE}No te preocupes, el camino del bienestar es constante ¡Mañana lo lograrás! 💗{RESET}")
     
@@ -73,7 +88,10 @@ def mostrar_gestion_retos():
     print(checklist)
 
     #guardar en json
-    datos_a_guardar = {"dias_acumulados": dias_acumulados}
+    datos_a_guardar = {
+        "reto_activo": reto_activo,
+        "dias_acumulados": dias_acumulados
+        }
     with open("datos.json", "w") as archivo:
         json.dump(datos_a_guardar, archivo, indent=4)
 
