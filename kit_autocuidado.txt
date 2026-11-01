@@ -1,0 +1,3 @@
+shampoo;bienestar;28000;1
+pastillas;medicina;3000;2
+crema;bienestar;4000;1
