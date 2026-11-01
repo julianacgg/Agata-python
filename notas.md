@@ -18,11 +18,22 @@ checklist = muestra de manera visual los dias que la usuaria marco como cumplido
 
 **variables kit autocuidado personal**
 opcion = registra la opcion que la usuaria desea elegir en el kit de autocuidado
+archivo = abre el archivo donde se guarda el inventario
+
 **variables registro elemento**
 nombre= nombre elemento
 tipo = categoria del elemento
 precio = precio elemento
 cantidad = numero de unidades del elemento
+categorias_validas = validar que el usuario si ponga alguna de las categorias validas
+
+**variables consulta de elementos**
+lineas = es la lista grande que contiene todos los renglones del archivo .txt
+linea = indice del ciclo for que guarda cada dato del archivo para mostrarlo en la tabla
+datos = vector que se crea al separar el texto cada que encuentra un ; dentro de el se guardan las variables del modulo de registro de elemento
+
+**variables actualizar elementos**
+nombre_buscar = variable que guarda el elemento q la usuaria quiere actualizar
 
 **variables archivo json**
 dias_acumulados = calcula el progreso que lleva la usaria del reto que activo en la sección GESTIÓN DE RETOS
@@ -31,4 +42,6 @@ reto_activo = guarda el reto que activo la usuaria en la seccion GESTIÓN DE RET
 **Paleta de colores actual:**
 ```ROSA_PASTEL = "\033[38;2;255;182;193m"```
 ```ROSA_CHICLE = "\033[38;2;255;105;180m"```
+```ROJO = "\033[38;2;255;50;50m"```
 ``` RESET       = "\033[0m" ```
+

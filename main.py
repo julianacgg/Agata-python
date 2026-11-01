@@ -1,4 +1,6 @@
 from gestion_de_retos import mostrar_gestion_retos
+from kit_autocuidado_personal import mostrar_kit_autocuidado
+
 #PALETA DE COLORES
 ROSA_PASTEL = "\033[38;2;255;182;193m"
 ROSA_CHICLE = "\033[38;2;255;105;180m"
@@ -32,7 +34,7 @@ while True:
         print("OPCION 4 EN DESARROLLO")
         input("\nPresiona Enter para continuar...")
     elif opcion == "5":
-        print("OPCION 5 EN DESARROLLO")
+        mostrar_kit_autocuidado()
         input("\nPresiona Enter para continuar...")
     elif opcion == "6":
         print("OPCION 6 EN DESARROLLO")
