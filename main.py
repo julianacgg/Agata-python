@@ -1,6 +1,8 @@
 from gestion_de_retos import mostrar_gestion_retos
 from kit_autocuidado_personal import mostrar_kit_autocuidado
 from ciclo_menstrual import mostrar_ciclo_menstrual
+from datos_curiosos import mostrar_dato_curioso
+from registro_diario_bienestar import menu_bienestar
 
 #PALETA DE COLORES
 ROSA_PASTEL = "\033[38;2;255;182;193m"
@@ -23,7 +25,7 @@ while True:
     mostrar_menu()
     opcion = (input("Ingrese cualquier opción del menú (1-7): "))
     if opcion == "1":
-        print(" OPCION 1 EN DESARROLLO") #reemplazar luego por cada pestaña
+        menu_bienestar()
         input("\nPresiona Enter para continuar...") 
     elif opcion == "2":
         mostrar_gestion_retos()
@@ -35,8 +37,8 @@ while True:
         mostrar_kit_autocuidado()
         input("\nPresiona Enter para continuar...")
     elif opcion == "5":
-        print("OPCION 6 EN DESARROLLO")
-        input("\nPresiona Enter para continuar...")
+        mostrar_dato_curioso()
+        
     elif opcion == "6":
         print ("Saliendo del programa !Hasta luego!")
         break

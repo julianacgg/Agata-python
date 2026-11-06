@@ -1,12 +1,12 @@
 {
-    "reto_activo": "\n\u001b[38;2;255;182;193m\u001b[1m3. Alimentaci\u00f3n consciente\u001b[0m",
+    "reto_activo": "\n\u001b[38;2;255;182;193m\u001b[1m2. Movimiento consciente\u001b[0m",
     "dias_estado": [
-        "\u2705",
         "\u274c",
         "\u2705",
-        "\u274c",
-        "\u274c",
-        "\u2705",
-        "\u2705"
+        "-",
+        "-",
+        "-",
+        "-",
+        "-"
     ]
 }
