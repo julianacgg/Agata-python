@@ -1,6 +1,6 @@
 from gestion_de_retos import mostrar_gestion_retos
 from kit_autocuidado_personal import mostrar_kit_autocuidado
-from entregable4.ciclo_menstrual import mostrar_ciclo_menstrual
+from ciclo_menstrual import mostrar_ciclo_menstrual
 
 #PALETA DE COLORES
 ROSA_PASTEL = "\033[38;2;255;182;193m"
