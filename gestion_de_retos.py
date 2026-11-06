@@ -10,7 +10,7 @@ def mostrar_gestion_retos():
 
     #leer el json
     try:
-        with open("datos.json", "r") as archivo:
+        with open("gestion_de_retos.json", "r") as archivo:
             datos = json.load(archivo)
             dias_estado = datos.get("dias_estado", ["-", "-", "-", "-", "-", "-", "-"])
             reto_activo = datos.get("reto_activo", "Ninguno")
@@ -100,6 +100,6 @@ def mostrar_gestion_retos():
         "reto_activo": reto_activo,
         "dias_estado": dias_estado
         }
-    with open("datos.json", "w") as archivo:
+    with open("gestion_de_retos.json", "w") as archivo:
         json.dump(datos_a_guardar, archivo, indent=4)
 

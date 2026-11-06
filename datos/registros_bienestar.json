@@ -1,0 +1,33 @@
+{
+    "ciclos": [
+        {
+            "id": 1,
+            "inicio": "2026-08-21",
+            "fin": "2026-08-23",
+            "duracion_dias": 3,
+            "sintomas": [
+                "colicos",
+                "acne"
+            ]
+        },
+        {
+            "id": 2,
+            "inicio": "2026-09-1",
+            "fin": "2026-09-5",
+            "duracion_dias": 5,
+            "sintomas": [
+                "malestar",
+                "colicos"
+            ]
+        },
+        {
+            "id": 3,
+            "inicio": "2026-11-6",
+            "fin": "2026-11-9",
+            "duracion_dias": 4,
+            "sintomas": [
+                "colicos"
+            ]
+        }
+    ]
+}

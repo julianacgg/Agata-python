@@ -12,12 +12,12 @@ def mostrar_menu(): #llamar funcion cada vez para mostrar el menú
     print(f"{ROSA_PASTEL}!Bienvenida! Selecciona en tu teclado el número de la opción que desees ver (1-7): {RESET}")
     print("")
     print("1. ☀️ Registro diario bienestar") #johan
-    print("2. 📅 Ver resumenes semanales") #valerie
-    print("3. 🏆 Gestión de retos") #juliana
-    print("4. 🌜 Seguimiento del ciclo menstrual") #valerie
-    print("5. 🌼 Kit autocuidado personal ") #juliana
-    print("6. ⭐ Datos curioso de la semana") #johan
-    print("7. 🚪 Salir")
+    print("2. 🏆 Gestión de retos") #juliana
+    print("3. 🌜 Seguimiento del ciclo menstrual") #valerie
+    print("4. 🌼 Kit autocuidado personal ") #juliana
+    print("5. ⭐ Datos curioso de la semana") #johan
+    print("6. 🚪 Salir") #
+    
 
 while True:
     mostrar_menu()
@@ -26,21 +26,18 @@ while True:
         print(" OPCION 1 EN DESARROLLO") #reemplazar luego por cada pestaña
         input("\nPresiona Enter para continuar...") 
     elif opcion == "2":
-        print("OPCION 2 EN DESARROLLO")
-        input("\nPresiona Enter para continuar...")
-    elif opcion == "3":
         mostrar_gestion_retos()
         input("\nPresiona Enter para continuar...")
-    elif opcion == "4":
-        print("OPCION 4 EN DESARROLLO")
+    elif opcion == "3":
+        mostrar_ciclo_menstrual()
         input("\nPresiona Enter para continuar...")
-    elif opcion == "5":
+    elif opcion == "4":
         mostrar_kit_autocuidado()
         input("\nPresiona Enter para continuar...")
-    elif opcion == "6":
+    elif opcion == "5":
         print("OPCION 6 EN DESARROLLO")
         input("\nPresiona Enter para continuar...")
-    elif opcion == "7":
+    elif opcion == "6":
         print ("Saliendo del programa !Hasta luego!")
         break
     else:
