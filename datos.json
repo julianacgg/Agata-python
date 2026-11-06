@@ -1,12 +1,16 @@
 {
-    "reto_activo": "\n\u001b[38;2;255;182;193m\u001b[1m3. Alimentaci\u00f3n consciente\u001b[0m",
-    "dias_estado": [
-        "\u2705",
-        "\u274c",
-        "\u2705",
-        "\u274c",
-        "\u274c",
-        "\u2705",
-        "\u2705"
-    ]
+    "bienestar": {
+        "06/11/2026": {
+            "fecha": "06/11/2026",
+            "animo": 5,
+            "comidas": [
+                "desayuno",
+                "almuerzo",
+                "comida"
+            ],
+            "ejercicio": 20,
+            "sueño": 4.0,
+            "agua": 4.0
+        }
+    }
 }
