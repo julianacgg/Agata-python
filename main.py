@@ -20,7 +20,7 @@ def mostrar_menu(): #llamar funcion cada vez para mostrar el menú
 
 while True:
     mostrar_menu()
-    opcion = (input("Ingrese cualquier opción del menú (1-7)"))
+    opcion = (input("Ingrese cualquier opción del menú (1-7): "))
     if opcion == "1":
         print(" OPCION 1 EN DESARROLLO") #reemplazar luego por cada pestaña
         input("\nPresiona Enter para continuar...") 
