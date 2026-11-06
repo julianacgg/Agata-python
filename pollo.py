@@ -4,4 +4,4 @@ if juliana == True:
 elif juliana == False:
     print ("Booleana is not activated")
 
-print("hello world")
+print("hello wor")
