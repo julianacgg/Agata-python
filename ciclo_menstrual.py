@@ -7,8 +7,8 @@ import random
 class Color:
     PURPURA = '\033[95m'
     AZUL = '\033[94m'
-    VERDE = '\033[92m'
-    AMARILLO = '\033[93m'
+    ROSA_CHICLE = "\033[38;2;255;105;180m"
+    ROSA_PASTEL = "\033[38;2;255;182;193m"
     ROJO = '\033[91m'
     RESET = '\033[0m'
     NEGRITA = '\033[1m'
@@ -60,7 +60,7 @@ class RastreadorCiclo:
     
     def registrar_ciclo(self):
         print(f"\n{Color.PURPURA}{Color.NEGRITA}--- REGISTRO DE CICLO MENSTRUAL ฅ ^>⩊<^ ฅ ---{Color.RESET}")
-        print(f"{Color.AMARILLO}ingresa los periodos anteriores q recuerdes para llegar al periodo actual˙ . ꒷ 🍰 . 𖦹˙—.{Color.RESET}")
+        print(f"{Color.ROSA_PASTEL}ingresa los periodos anteriores q recuerdes para llegar al periodo actual˙ . ꒷ 🍰 . 𖦹˙—.{Color.RESET}")
 
         while True:
            #validar si ya hay ciclos y si el último ya está cerca de la fecha actual
@@ -70,7 +70,7 @@ class RastreadorCiclo:
                 try:
                     f_inicio_ult = datetime.strptime(ultimo["inicio"], "%Y-%m-%d")
                     if (datetime.now() - f_inicio_ult).days <= 35:
-                        print(f"{Color.VERDE} has registrado hasta el periodo actual en curso.{Color.RESET}")
+                        print(f"{Color.ROSA_CHICLE} has registrado hasta el periodo actual en curso.{Color.RESET}")
                         break
                 except ValueError:
                     pass
@@ -104,12 +104,12 @@ class RastreadorCiclo:
             #confirmción
             confirmacion_valida = False
             while not confirmacion_valida:
-                confirmar = input(f"{Color.AMARILLO} ¿Estás segura de estas fechas? Después no podrás cambiarlas (si/no): {Color.RESET}").strip().lower()
+                confirmar = input(f"{Color.ROSA_PASTEL} ¿Estás segura de estas fechas? Después no podrás cambiarlas (si/no): {Color.RESET}").strip().lower()
                 
                 if confirmar in ['s', 'si', 'sí', 'SI']:
                     confirmacion_valida = True
                 elif confirmar in ['n', 'no', 'NO']:
-                    print(f"{Color.AMARILLO} Entendido, vuelve a ingresar las fechas de este ciclo.{Color.RESET}\n")
+                    print(f"{Color.ROSA_PASTEL} Entendido, vuelve a ingresar las fechas de este ciclo.{Color.RESET}\n")
                     confirmacion_valida = "repetir"
                     break
                 else:
@@ -131,22 +131,22 @@ class RastreadorCiclo:
 
             self.datos["ciclos"].append(nuevo_ciclo)
             self.guardar_datos()
-            print(f"{Color.VERDE}ciclo guardado con éxito en el historial{Color.RESET}")
+            print(f"{Color.ROSA_CHICLE}ciclo guardado con éxito en el historial{Color.RESET}")
 
             # Preguntar si desea registrar el siguiente ciclo o si ya llegó al actual
             dias_desde_inicio = (datetime.now() - fecha_inicio).days
             if dias_desde_inicio <= 35:
-                print(f"{Color.VERDE} Has alcanzado el periodo actual{Color.RESET}")
+                print(f"{Color.ROSA_CHICLE} Has alcanzado el periodo actual{Color.RESET}")
                 break
             else:
-                continuar = input(f"{Color.AMARILLO}¿Deseas registrar el siguiente ciclo para acercarte al actual? (si/no): {Color.RESET}").strip().lower()
+                continuar = input(f"{Color.ROSA_PASTEL}¿Deseas registrar el siguiente ciclo para acercarte al actual? (si/no): {Color.RESET}").strip().lower()
                 if continuar not in ['s', 'si', 'sí', 'SI']:
                     break
 
     def consultar_historial(self):
         ciclos = self.datos.get("ciclos", [])
         if not ciclos:
-            print(f"\n{Color.AMARILLO} No hay ciclos registrados en el historial.{Color.RESET}")
+            print(f"\n{Color.ROSA_PASTEL} No hay ciclos registrados en el historial.{Color.RESET}")
             return
 
         print(f"\n{Color.PURPURA}{Color.NEGRITA}────۶ৎ────-----------------------------{Color.RESET}")
@@ -190,25 +190,25 @@ class RastreadorCiclo:
             mensaje = random.choice(MENSAJES_FASES[fase])
             print(f"\n{Color.PURPURA}---------------------------------------------{Color.RESET}")
             print(f"  {Color.NEGRITA}ESTADO DE HOY ⚞^. .^⚟ (Ciclo actual):{Color.RESET}")
-            print(f" ୭ ᵎᵎ 🧁 Día del ciclo : {Color.AMARILLO}Día {dias_transcurridos}{Color.RESET}")
-            print(f"  ݁ ˖Ი𐑼⋆ fase biológica: {Color.AMARILLO}{fase.capitalize()}{Color.RESET}")
-            print(f"   mensaje de apoyo: {Color.VERDE}\"{mensaje}\"{Color.RESET}")
+            print(f" ୭ ᵎᵎ 🧁 Día del ciclo : {Color.ROSA_PASTEL}Día {dias_transcurridos}{Color.RESET}")
+            print(f"  ݁ ˖Ი𐑼⋆ fase biológica: {Color.ROSA_PASTEL}{fase.capitalize()}{Color.RESET}")
+            print(f"   mensaje de apoyo: {Color.ROSA_CHICLE}\"{mensaje}\"{Color.RESET}")
         except ValueError:
             pass
 
         print(f"\n{Color.PURPURA}---------------------------------------------{Color.RESET}")
         if duraciones_completas:
             promedio = sum(duraciones_completas) / len(duraciones_completas)
-            print(f"Promedio de duración del ciclo: {Color.VERDE}{Color.NEGRITA}{promedio:.1f} días{Color.RESET}")
+            print(f"Promedio de duración del ciclo: {Color.ROSA_CHICLE}{Color.NEGRITA}{promedio:.1f} días{Color.RESET}")
         else:
-            print(f"promedio: {Color.AMARILLO}Se necesita al menos 1 ciclo completado para calcular el promedio.{Color.RESET}")
+            print(f"promedio: {Color.ROSA_PASTEL}Se necesita al menos 1 ciclo completado para calcular el promedio.{Color.RESET}")
 
 
 # prueba local
 if __name__ == "__main__":
     rastreador = RastreadorCiclo()
-    print(f"{Color.VERDE}⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚MÓDULO DE CICLO MENSTRUAL CARGADO CORRECTAMENTE ⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚{Color.RESET}")
-    print(f"{Color.VERDE}⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚{Color.RESET}")
+    print(f"{Color.ROSA_CHICLE}⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚MÓDULO DE CICLO MENSTRUAL CARGADO CORRECTAMENTE ⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚{Color.RESET}")
+    print(f"{Color.ROSA_CHICLE}⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚ ⋆˚☆˖°⋆｡° ✮˖ ࣪ ⊹⋆.˚{Color.RESET}")
     rastreador.registrar_ciclo()
     rastreador.consultar_historial()
 
