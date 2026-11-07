@@ -6,7 +6,7 @@ NEGRILLA = "\033[1m" #poner texto en negrilla
 RESET       = "\033[0m" #variable para apagar el color o negrita
 import json
 from datetime import date, datetime
-ARCHIVO_DATOS = "datos.json"
+ARCHIVO_DATOS = "registro_diario_bienestar.json"
 
 ANIMOS = {
     1: "Muy mal",

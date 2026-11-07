@@ -40,7 +40,7 @@ MENSAJES_FASES = {
 
 
 class RastreadorCiclo:
-    def __init__(self, ruta_datos="datos/registros_bienestar.json"):
+    def __init__(self, ruta_datos="datos/ciclo_menstrual.json"):
         self.ruta_datos = ruta_datos
         self.datos = self.cargar_datos()
 

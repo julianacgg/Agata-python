@@ -1,5 +1,5 @@
 # Diccionario de variables
-Aqui estan todos los nombres de las variables utilizadas en el proyecto, asi como la paleta de colores utilizada y aspectos importantes a tomar en consideración. 😊
+Aqui estan todos los nombres de las variables en la gestion d retos y kit de autocuidado, asi como la paleta de colores y otros aspectos más
 
 **variables main**
 opcion = sirve para guardar la opcion que guarde la usuaria y redirigirla a la pestaña que ella desee
@@ -44,4 +44,6 @@ reto_activo = guarda el reto que activo la usuaria en la seccion GESTIÓN DE RET
 ```ROSA_CHICLE = "\033[38;2;255;105;180m"```
 ```ROJO = "\033[38;2;255;50;50m"```
 ``` RESET       = "\033[0m" ```
+```PURPURA = '\033[95m'```
+```AZUL = '\033[94m'```
 

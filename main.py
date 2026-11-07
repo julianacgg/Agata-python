@@ -1,8 +1,8 @@
-from gestion_de_retos import mostrar_gestion_retos
-from kit_autocuidado_personal import mostrar_kit_autocuidado
-from ciclo_menstrual import mostrar_ciclo_menstrual
-from datos_curiosos import mostrar_dato_curioso
-from registro_diario_bienestar import menu_bienestar
+from funcionalidades.gestion_de_retos import mostrar_gestion_retos
+from funcionalidades.kit_autocuidado_personal import mostrar_kit_autocuidado
+from funcionalidades.ciclo_menstrual import mostrar_ciclo_menstrual
+from funcionalidades.datos_curiosos import mostrar_dato_curioso
+from funcionalidades.registro_diario_bienestar import menu_bienestar
 
 #PALETA DE COLORES
 ROSA_PASTEL = "\033[38;2;255;182;193m"
