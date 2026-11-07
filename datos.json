@@ -2,14 +2,16 @@
     "bienestar": {
         "06/11/2026": {
             "fecha": "06/11/2026",
-            "animo": 2,
+            "animo": 1,
             "comidas": [
-                "jugo",
-                "pastas"
+                "desayuno",
+                "snack",
+                "almuerzo",
+                "comida"
             ],
-            "ejercicio": 0,
-            "sueño": 6.0,
-            "agua": 4.0
+            "ejercicio": 30,
+            "sueño": 3.0,
+            "agua": 6.7
         }
     }
 }
