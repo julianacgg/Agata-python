@@ -12,6 +12,16 @@
             "ejercicio": 30,
             "sueño": 3.0,
             "agua": 6.7
+        },
+        "07/11/2026": {
+            "fecha": "07/11/2026",
+            "animo": 4,
+            "comidas": [
+                "arroz"
+            ],
+            "ejercicio": 3,
+            "sueño": 7.0,
+            "agua": 2.0
         }
     }
 }
