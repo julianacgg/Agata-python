@@ -27,7 +27,7 @@ def registrar_elemento(): # FUNCION REGISTRAR 1
         cantidad = input("Ingrese la cantidad nuevamente: ").strip()
     
 
-    archivo = open("kit_autocuidado.txt", "a", encoding="utf-8") #abrir archivo
+    archivo = open("datos/kit_autocuidado.txt", "a", encoding="utf-8") #abrir archivo
     archivo.write(f"{nombre};{tipo};{precio};{cantidad}\n") #escribir sobre el archivo en orden
     archivo.close() #cerrar archivo
 
@@ -40,7 +40,7 @@ def consultar_elementos(): #FUNCION CONSULTAR 2
     print(f"\n{ROSA_CHICLE} === 📒🔍 CONSULTAR ELEMENTOS 🔍📒 ==={RESET}")
 
     try:
-        with open("kit_autocuidado.txt", "r", encoding="utf-8") as archivo: 
+        with open("datos/kit_autocuidado.txt", "r", encoding="utf-8") as archivo: 
             lineas = archivo.readlines()
 
             if not lineas:
@@ -67,7 +67,7 @@ def actualizar_elemento(): #FUNCION ACTUALIZAR 3
     nombre_buscar = input("Ingrese el nombre del producto a actualizar: ").strip().upper()
 
     try:
-        archivo = open("kit_autocuidado.txt","r", encoding="utf-8")
+        archivo = open("datos/kit_autocuidado.txt","r", encoding="utf-8")
         lineas = archivo.readlines()
         archivo.close()
 
@@ -104,7 +104,7 @@ def actualizar_elemento(): #FUNCION ACTUALIZAR 3
                 else:
                     nuevas_lineas.append(linea)
         if encontrado:
-            archivo = open("kit_autocuidado.txt", "w", encoding="utf-8")
+            archivo = open("datos/kit_autocuidado.txt", "w", encoding="utf-8")
             archivo.writelines(nuevas_lineas)
             archivo.close()
             print(f"{VERDE}✅ ¡Elemento actualizado con éxito!{RESET}")
@@ -121,7 +121,7 @@ def eliminar_elemento(): #FUNCION ELIMINAR 4
     nombre_buscar = input("Ingrese el nombre del producto que desea eliminar: ").strip().upper()
 
     try:
-        archivo = open("kit_autocuidado.txt","r", encoding="utf-8")
+        archivo = open("datos/kit_autocuidado.txt","r", encoding="utf-8")
         lineas = archivo.readlines()
         archivo.close()
 
@@ -153,7 +153,7 @@ def eliminar_elemento(): #FUNCION ELIMINAR 4
 
         if encontrado:
             if eliminado:
-                archivo = open("kit_autocuidado.txt", "w", encoding="utf-8")
+                archivo = open("datos/kit_autocuidado.txt", "w", encoding="utf-8")
                 archivo.writelines(nuevas_lineas)
                 archivo.close()
                 print(f"\n{VERDE}✅ ¡Elemento eliminado con éxito del kit!{RESET}")
