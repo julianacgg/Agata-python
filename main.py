@@ -11,7 +11,7 @@ RESET       = "\033[0m" #variable para apagar el color
 
 def mostrar_menu(): #llamar funcion cada vez para mostrar el menú
     print (f"{ROSA_CHICLE}🌸🌸 == ÁGATA BIENESTAR FEMENINO == 🌸🌸{RESET}")
-    print(f"{ROSA_PASTEL}!Bienvenida! Selecciona en tu teclado el número de la opción que desees ver (1-7): {RESET}")
+    print(f"{ROSA_PASTEL}!Bienvenida! Selecciona en tu teclado el número de la opción que desees ver (1-6): {RESET}")
     print("")
     print("1. ☀️ Registro diario bienestar") #johan
     print("2. 🏆 Gestión de retos") #juliana
@@ -23,7 +23,7 @@ def mostrar_menu(): #llamar funcion cada vez para mostrar el menú
 
 while True:
     mostrar_menu()
-    opcion = (input("Ingrese cualquier opción del menú (1-7): "))
+    opcion = (input("Ingrese cualquier opción del menú (1-6): "))
     if opcion == "1":
         menu_bienestar()
         input("\nPresiona Enter para continuar...") 
@@ -38,10 +38,10 @@ while True:
         input("\nPresiona Enter para continuar...")
     elif opcion == "5":
         mostrar_dato_curioso()
-        
+        input("\nPresiona Enter para continuar...")
     elif opcion == "6":
         print ("Saliendo del programa !Hasta luego!")
         break
     else:
-        print("Opción inválida, ingresa un número del 1 al 7")
+        print("Opción inválida, ingresa un número del 1 al 6")
         input("\nPresiona Enter para continuar...")

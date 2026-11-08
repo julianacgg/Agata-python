@@ -22,6 +22,18 @@
             "ejercicio": 3,
             "sueño": 7.0,
             "agua": 2.0
+        },
+        "08/11/2026": {
+            "fecha": "08/11/2026",
+            "animo": 5,
+            "comidas": [
+                "Hamburguesa",
+                "papas",
+                "gaseosa"
+            ],
+            "ejercicio": 30,
+            "sueño": 6.0,
+            "agua": 5.0
         }
     }
 }
